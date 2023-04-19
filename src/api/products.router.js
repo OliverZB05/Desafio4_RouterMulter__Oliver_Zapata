@@ -46,21 +46,21 @@ function arraysEqual(a, b) {
 //################## Método PUT ##################
 router.put('/:pid', (req, res) => {
     if ('id' in req.body) {
-        return res.status(400).send({ status: 'error', error: 'No se permite establecer el campo id manualmente' });
+        return res.status(400).send({ status: 'error', error: 'It is not allowed to set the id field manually' });
     }
 
     if ('status' in req.body) {
-        return res.status(400).send({ status: 'error', error: 'No se permite establecer el campo status manualmente' });
+        return res.status(400).send({ status: 'error', error: 'It is not allowed to set the status field manually' });
     }
 
     if ('code' in req.body) {
-        return res.status(400).send({ status: 'error', error: 'No se permite establecer el campo code manualmente' });
+        return res.status(400).send({ status: 'error', error: 'It is not allowed to set the code field manually' });
     }
 
     const allowedProperties = new Set(['title', 'description', 'price', 'thumbnail', 'stock', 'category']);
     for (const property in req.body) {
         if (!allowedProperties.has(property)) {
-            return res.status(400).send({ status: 'error', error: `La propiedad ${property} no está permitida, solo están permitidas las propiedades 'title', 'description', 'price', 'thumbnail', 'stock', 'category'` });
+            return res.status(400).send({ status: 'error', error: `Property ${property} is not allowed, only 'title', 'description', 'price', 'thumbnail', 'stock', 'category' properties are allowed` });
         }
     }
 
@@ -81,7 +81,7 @@ router.put('/:pid', (req, res) => {
     }
 
     if(!Array.isArray(prod.thumbnail)){
-        return res.status(400).send({ status: 'error', error: 'thumbnail debe ser un array' });
+        return res.status(400).send({ status: 'error', error: 'thumbnail must be an array' });
     }
 
     if (index !== -1) {
@@ -92,20 +92,20 @@ router.put('/:pid', (req, res) => {
             productsArray[index] = prod;
             res.send({ status: 'success', message: 'product updated' });
         } else {
-            let errorMessage = 'Ya existe un producto';
+            let errorMessage = 'There is already a product with';
             if (existingProduct.title === prod.title) {
-                errorMessage += ` con el title "${prod.title}"`;
+                errorMessage += ` the title "${prod.title}"`;
             }
             if (existingProduct.description === prod.description) {
-                errorMessage += ` con la description "${prod.description}"`;
+                errorMessage += ` the description "${prod.description}"`;
             }
             if (arraysEqual(existingProduct.thumbnail, prod.thumbnail)) {
-                errorMessage += ` con la thumbnail "${prod.thumbnail}"`;
+                errorMessage += ` the thumbnail "${prod.thumbnail}"`;
             }
             res.send({ status: 'error', message: errorMessage });
         }
     } else {
-        res.send({ status: 'error', message: 'El producto no existe' });
+        res.send({ status: 'error', message: 'The product does not exist' });
     }
 });
 //################## Método PUT ##################
@@ -116,21 +116,21 @@ router.put('/:pid', (req, res) => {
 router.post('/', (req, res) => {
 
     if ('id' in req.body) {
-        return res.status(400).send({ status: 'error', error: 'No se permite establecer el campo id manualmente' });
+        return res.status(400).send({ status: 'error', error: 'It is not allowed to set the id field manually' });
     }
 
     if ('status' in req.body) {
-        return res.status(400).send({ status: 'error', error: 'No se permite establecer el campo status manualmente' });
+        return res.status(400).send({ status: 'error', error: 'It is not allowed to set the status field manually' });
     }
 
     if ('code' in req.body) {
-        return res.status(400).send({ status: 'error', error: 'No se permite establecer el campo code manualmente' });
+        return res.status(400).send({ status: 'error', error: 'It is not allowed to set the code field manually' });
     }
 
     const allowedProperties = new Set(['title', 'description', 'price', 'thumbnail', 'stock', 'category']);
     for (const property in req.body) {
         if (!allowedProperties.has(property)) {
-            return res.status(400).send({ status: 'error', error: `La propiedad ${property} no está permitida, solo están permitidas las propiedades 'title', 'description', 'price', 'thumbnail', 'stock', 'category'` });
+            return res.status(400).send({ status: 'error', error: `Property ${property} is not allowed, only 'title', 'description', 'price', 'thumbnail', 'stock', 'category' properties are allowed` });
         }
     }
 
@@ -143,7 +143,7 @@ router.post('/', (req, res) => {
     }
 
     if(!Array.isArray(prod.thumbnail)){
-        return res.status(400).send({ status: 'error', error: 'thumbnail debe ser un array' });
+        return res.status(400).send({ status: 'error', error: 'thumbnail must be an array' });
     }
 
     const existingProduct = productsArray.find((p, i) =>
@@ -154,15 +154,15 @@ router.post('/', (req, res) => {
     );
 
     if (existingProduct) {
-        let errorMessage = 'Ya existe un producto';
+        let errorMessage = 'There is already a product with';
         if (existingProduct.title === prod.title) {
-            errorMessage += ` con el title "${prod.title}"`;
+            errorMessage += ` the title "${prod.title}"`;
         }
         if (existingProduct.description === prod.description) {
-            errorMessage += ` con la description "${prod.description}"`;
+            errorMessage += ` the description "${prod.description}"`;
         }
         if (arraysEqual(existingProduct.thumbnail, prod.thumbnail)) {
-            errorMessage += ` con la thumbnail "${prod.thumbnail}"`;
+            errorMessage += ` the thumbnail "${prod.thumbnail}"`;
         }
         res.send({ status: 'error', message: errorMessage });
     } else {
