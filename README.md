@@ -88,8 +88,7 @@ Aquí se usa el id del carrito en el parámetro :cid para especificar en que car
 
 - Método DELETE (para quitar un producto del carrito)<br>
 http://localhost:8080/api/carts/:cid/product/:pid<br>
-Al igual que el método anterior se usa el id del carrito en el parámetro :cid para especificar de que carrito eliminar el producto, y se usa el id del producto en el parámetro :pid para especificar que producto eliminar del carrito. <br><br>
-
+Al igual que el método anterior se usa el id del carrito en el parámetro :cid para especificar de que carrito eliminar el producto, y se usa el id del producto en el parámetro :pid para especificar que producto eliminar del carrito.<br><br>
 Cuando se elimina un producto con cierta cantidad (por ejemplo 8) esta va disminuyendo, pero si la cantidad es 1 y se ejecuta este método lo borrará al no quedar ninguna cantidad de ese producto
 
 - Método DELETE (para eliminar carrito)<br>
