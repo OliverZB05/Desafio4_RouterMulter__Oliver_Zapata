@@ -76,7 +76,7 @@ Se borrará el producto con el id específicado
 - Método POST<br>
 http://localhost:8080/api/carts
 
--Método GET por ID<br>
+- Método GET por ID<br>
 http://localhost:8080/api/carts/1<br>
 Una vez creado un carrito se coloca su id como valor en el parámetro :pid
 
