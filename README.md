@@ -15,7 +15,7 @@ app.use("/api/products", productsRouter);
 app.use("/api/carts", cartsRouter);
 
 ### Métodos del router products.router.js
-- Método GET
+- Método GET<br>
 http://localhost:8080/api/products
 
 - Método GET por id
