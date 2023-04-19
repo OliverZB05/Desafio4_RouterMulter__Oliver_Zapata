@@ -14,7 +14,7 @@ En el archivo principal index.js usa 2 routers:
 app.use("/api/products", productsRouter);
 app.use("/api/carts", cartsRouter);
 
-# Métodos del router products.router.js
+### Métodos del router products.router.js
 - Método GET
 http://localhost:8080/api/products
 
@@ -72,7 +72,7 @@ http://localhost:8080/api/products/:pid
 Se borrará el producto con el id específicado
 
 
-# Métodos del router carts.router.js
+### Métodos del router carts.router.js
 - Método POST
 http://localhost:8080/api/carts
 
