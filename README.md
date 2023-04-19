@@ -84,7 +84,7 @@ Una vez creado un carrito se coloca su id como valor en el parámetro :pid
 http://localhost:8080/api/carts/:cid/product/:pid
 Aquí se usa el id del carrito en el parámetro :cid para especificar en que carrito quiero poner el producto, y se usa el id del producto en el parámetro :pid para especificar que producto a poner en el carrito
 
-------- Extras -------
+- #### ------- Extras -------
 
 - Método DELETE (para quitar un producto del carrito)
 http://localhost:8080/api/carts/:cid/product/:pid
