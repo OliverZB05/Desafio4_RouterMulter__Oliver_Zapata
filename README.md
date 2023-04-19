@@ -18,12 +18,12 @@ app.use("/api/carts", cartsRouter);
 - Método GET<br>
 http://localhost:8080/api/products
 
-- Método GET por id
-http://localhost:8080/api/products/:pid 
+- Método GET por id<br>
+http://localhost:8080/api/products/:pid <br>
 Una vez creado un producto se coloca su id como valor en el parámetro :pid
 
-- Método POST
-http://localhost:8080/api/products 
+- Método POST<br>
+http://localhost:8080/api/products <br>
 Se pueden crear productos mediante postman u otra herramienta, a continuación pasaré algunos productos de ejemplo que se pueden utilizar:
 
 {
@@ -62,37 +62,37 @@ Se pueden crear productos mediante postman u otra herramienta, a continuación p
 }
 
 
-- Método PUT
-http://localhost:8080/api/products/:pid
+- Método PUT<br>
+http://localhost:8080/api/products/:pid <br>
 Se actualizará el producto con el id específicado
 
 
-- Método DELETE
-http://localhost:8080/api/products/:pid
+- Método DELETE<br>
+http://localhost:8080/api/products/:pid <br>
 Se borrará el producto con el id específicado
 
 
 ### Métodos del router carts.router.js
-- Método POST
+- Método POST<br>
 http://localhost:8080/api/carts
 
--Método GET por ID
-http://localhost:8080/api/carts/1
+-Método GET por ID<br>
+http://localhost:8080/api/carts/1<br>
 Una vez creado un carrito se coloca su id como valor en el parámetro :pid
 
-- Método POST (para pasar un producto al carrito)
-http://localhost:8080/api/carts/:cid/product/:pid
+- Método POST (para pasar un producto al carrito)<br>
+http://localhost:8080/api/carts/:cid/product/:pid<br>
 Aquí se usa el id del carrito en el parámetro :cid para especificar en que carrito quiero poner el producto, y se usa el id del producto en el parámetro :pid para especificar que producto a poner en el carrito
 
 #### ------- Extras -------
 
-- Método DELETE (para quitar un producto del carrito)
-http://localhost:8080/api/carts/:cid/product/:pid
-Al igual que el método anterior se usa el id del carrito en el parámetro :cid para especificar de que carrito eliminar el producto, y se usa el id del producto en el parámetro :pid para especificar que producto eliminar del carrito. 
+- Método DELETE (para quitar un producto del carrito)<br>
+http://localhost:8080/api/carts/:cid/product/:pid<br>
+Al igual que el método anterior se usa el id del carrito en el parámetro :cid para especificar de que carrito eliminar el producto, y se usa el id del producto en el parámetro :pid para especificar que producto eliminar del carrito. <br><br>
 
 Cuando se elimina un producto con cierta cantidad (por ejemplo 8) esta va disminuyendo, pero si la cantidad es 1 y se ejecuta este método lo borrará al no quedar ninguna cantidad de ese producto
 
-- Método DELETE (para eliminar carrito)
-http://localhost:8080/api/carts/:cid
+- Método DELETE (para eliminar carrito)<br>
+http://localhost:8080/api/carts/:cid<br>
 Se borrará el carrito con el carrito con el id específicado
 
