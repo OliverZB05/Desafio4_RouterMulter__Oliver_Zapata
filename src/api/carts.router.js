@@ -27,7 +27,6 @@ router.post('/', (req, res) => {
 //################## Método GET ##################
 router.get('/:cid', (req, res) => {
     const productsArray = readProducts();
-    console.log(productsArray);
     const carts = readCarts();
     const cartId = Number(req.params.cid);
 
