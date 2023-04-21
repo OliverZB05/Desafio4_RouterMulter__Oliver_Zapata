@@ -24,42 +24,6 @@ Una vez creado un producto se coloca su id como valor en el parámetro :pid
 
 - Método POST<br>
 http://localhost:8080/api/products <br>
-Se pueden crear productos mediante postman u otra herramienta, a continuación pasaré algunos productos de ejemplo que se pueden utilizar:
-
-{
-    "title": "Silla de oficina",
-    "description": "Silla de oficina en excelente estado",
-    "price": 2000,
-    "thumbnail": [
-        "https://i.ibb.co/P9Ytc2W/1-Silla-de-oficina.png"
-    ],
-    "stock": 20,
-    "category": "Productos del hogar"
-}
-
-
-{
-    "title": "Smartwatch",
-    "description": "reloj digital deportivo",
-    "price": 3000,
-    "thumbnail": [
-        "https://i.ibb.co/0rzKD6R/23-Smartwatch.png"
-    ],
-    "stock": 15,
-    "category": "Electrodomésticos"
-}
-
-
-{
-    "title": "Cafetera",
-    "description": "El mejor producto de cocina para las mañanas",
-    "price": 500,
-    "thumbnail": [
-        "https://i.ibb.co/HYFpnNB/18-Cafetera.jpg"
-    ],
-    "stock": 30,
-    "category": "Productos de cocina"
-}
 
 
 - Método PUT<br>
